@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 model = load_model('./models/parkinson_model_2.h5')
 
 st.title("Parkinson's Disease Detection")
-st.write("Upload a spiral drawing to check for Parkinson's disease.")
+st.write("Upload a spiral drawing image to predict if it indicates Parkinson's disease.")
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
@@ -28,3 +28,5 @@ if uploaded_file is not None:
 
     st.image(uploaded_file, caption="Uploaded Spiral", use_column_width=True)
     st.write(f"Prediction: **{result}** (Confidence: {confidence:.2f})")
+
+st.write("Note: This model is trained on spiral drawings and achieves 73.33% accuracy.")
