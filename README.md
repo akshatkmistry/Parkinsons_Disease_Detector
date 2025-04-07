@@ -1,84 +1,103 @@
-# Parkinson's Disease Detection System
+# 🧠 Parkinson's Disease Detector
 
-## Overview
-This project implements a machine learning system to detect Parkinson's disease from spiral drawings. The system uses Convolutional Neural Networks (CNNs) to analyze hand-drawn spirals and classify them as either from a healthy individual or someone with Parkinson's disease.
+A deep learning-based web app that detects **Parkinson's Disease** from **spiral drawings** using a Convolutional Neural Network (CNN) built with TensorFlow/Keras and deployed via **Streamlit**.
 
-## Background
-Parkinson's disease is a neurodegenerative disorder that affects movement control. One of the early symptoms is changes in handwriting and drawing abilities, known as micrographia. This project leverages this symptom by analyzing spiral drawings, which can reveal tremors and other motor impairments characteristic of Parkinson's disease.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://parkinsons-disease-detector.streamlit.app)  
 
-## Project Structure
-```
-├── data/                  # Dataset storage
-│   ├── spiral/            # Spiral drawing images
-│   │   ├── training/      # Training dataset
-│   │   └── testing/       # Testing dataset
-│   └── wave/              # Wave drawing images (alternative dataset)
-├── notebooks/             # Jupyter notebooks
-│   ├── data_preprocessing.ipynb  # Data preparation
-│   ├── model_training.ipynb      # Model development
-│   └── model_evaluation.ipynb    # Performance assessment
-├── src/                   # Source code
-│   └── app.py             # Streamlit web application
-├── models/                # Saved trained models
-├── docs/                  # Project documentation
-├── requirements.txt       # Dependencies
-└── README.md              # Project overview
-```
+---
 
-## Features
-- **Data Preprocessing**: Techniques for image normalization and augmentation
-- **CNN Model**: Deep learning architecture optimized for image classification
-- **Performance Metrics**: Evaluation using accuracy, precision, and recall
-- **Web Interface**: User-friendly Streamlit application for real-time predictions
+## 🚀 Features
 
-## Installation
+- 🧪 **Model**: Trained CNN to classify spiral drawings as `healthy` or `parkinson` with **73.33% accuracy**.
+- 📤 **Web App**: Upload a 128×128 pixel spiral image to get real-time predictions.
+- 📊 **Visualizations**: Training/validation accuracy plots and sample predictions included.
 
-1. Clone the repository:
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
 ```bash
-git clone https://github.com/yourusername/Parkinsons-Detection.git
-cd Parkinsons-Detection
+git clone https://github.com/akshatkmistry/Parkinsons_Disease_Detector.git
+cd Parkinsons_Disease_Detector
 ```
 
-2. Install dependencies:
+### 2. Set Up Environment
+
 ```bash
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Usage
+### 3. Run Locally
 
-### Running the Web Application
 ```bash
-cd src
-streamlit run app.py
+streamlit run src/app.py
 ```
 
-The application will open in your default web browser. Upload a spiral drawing image to get a prediction on whether it indicates Parkinson's disease or not.
+---
 
-### Training the Model
-To retrain the model with your own data:
+## 🧾 Dependencies
 
-1. Place your spiral images in the appropriate directories under `data/spiral/`
-2. Run the notebooks in sequence:
-   - `data_preprocessing.ipynb`
-   - `model_training.ipynb`
-   - `model_evaluation.ipynb`
+**Python**: 3.12
 
-## Model Performance
-The current model achieves:
-- Accuracy: ~70%
-- Precision: ~65%
-- Recall: ~75%
+### Python Packages (`requirements.txt`)
+```plaintext
+ numpy
+opencv-python-headless
+tensorflow
+scikit-learn
+matplotlib
+seaborn
+streamlit
+```
 
-## Future Improvements
-- Implement data augmentation to improve model robustness
-- Explore transfer learning with pre-trained models
-- Add explainability features to highlight decision factors
-- Incorporate wave drawings for multi-modal analysis
+### System Packages (`packages.txt`)
+Required for **Streamlit Cloud** deployment:
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+```plaintext
+libsm6  
+libxext6  
+libxrender-dev  
+libglib2.0-0  
+```
 
-## Acknowledgments
-- Dataset providers
-- TensorFlow and Keras teams
-- Streamlit for the web application framework
+---
+
+## 🧠 Usage
+
+- **Web App**: Upload a spiral image (`128x128`, PNG or JPG). The app returns whether the drawing is from a person with Parkinson’s or not.
+
+---
+
+## 📈 Results
+
+| Metric     | Value   |
+|------------|---------|
+| Accuracy   | 73.33%  |
+| Precision  | 0.89    |
+| Recall     | 0.53    |
+| F1-Score   | 0.67    |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Follow these steps:
+
+1. Fork the repository  
+2. Create a new branch: `git checkout -b feature-branch`  
+3. Commit your changes: `git commit -m "Add feature"`  
+4. Push to your branch: `git push origin feature-branch`  
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+**MIT License**  
+© Akshat Mistry, 2025
+
