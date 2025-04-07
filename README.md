@@ -1,5 +1,9 @@
 # 🧠 Parkinson's Disease Detector
 
+<div align="center">
+  <img src="[https://i.gifer.com/5hoN.gif](https://mir-s3-cdn-cf.behance.net/project_modules/disp/48341e34539809.56d4b610ee304.gif)" width="300" alt="Spiral Drawing">
+</div>
+
 A deep learning-based web app that detects **Parkinson's Disease** from **spiral drawings** using a Convolutional Neural Network (CNN) built with TensorFlow/Keras and deployed via **Streamlit**.
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://parkinsons-disease-detector.streamlit.app)  
